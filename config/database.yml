@@ -25,5 +25,9 @@ test:
   database: product-register_test
 
 production:
-  <<: *default
-  database: product-register_production
+  url: <%= ENV['DATABASE_URL'] %>
+
+#production:
+#  <<: *default
+#  database: product-register_production
+
